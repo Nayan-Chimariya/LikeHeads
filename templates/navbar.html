@@ -10,7 +10,11 @@
     <p> Hello {{request.user}} </p>
     <a href='{% url "logout" %}'> Logout </a>
 {% else %}
+
+{% if page != "register" %}
     <a href='{% url "login" %}'> Login </a>
+{% endif %}
+
 {% endif %}
 
 <hr />
